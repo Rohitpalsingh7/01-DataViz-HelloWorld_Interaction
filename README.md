@@ -11,7 +11,8 @@ This visualization depicts a boy standing in left part of the screen where he hi
 Once the ball lands to the basket , Two events occur, first is the bulging out of boys' eyes with different colors expressing the happiness and other represents the different colors of balls coming out from the basket. Both occuring simultaneously.
 
 
-2. Working Link :https://rohitpalsingh7.github.io/01-ghd3/index.html
+2. Working Link :
+ https://rohitpalsingh7.github.io/01-ghd3/index.html
 
 3. Technical and Design Achievements :
 
