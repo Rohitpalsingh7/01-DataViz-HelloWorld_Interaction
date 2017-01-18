@@ -1,85 +1,151 @@
-Assignment 1 - Hello World: GitHub and d3  
-===
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+   <title>Hello World</title>
+   <script src="https://d3js.org/d3.v4.min.js"></script>
+   <link href="style.css" rel="stylesheet">
+ </head>
+ <body>
+   <div id="container" style="width:100%;">                                   
+      <div id="left" "> 
+         
+         <svg width="1400" height="1200"> 
+            <circle cx="150" cy="200" r="60", fill="rgba(255,255,0,0.25)"> </circle>
+            <circle id="eyes" cx="120" cy="180" r="10", fill="rgba(128,128,0,0.90)"> </circle>
+            <circle id="eyes" cx="180" cy="180" r="10", fill="rgba(128,128,0,0.90)"> </circle>
+            <line x1="140" y1="220" x2="160" y2="220" stroke="red" stroke-width="3"/>
+            <line x1="150" y1="260" x2="150" y2="420" stroke="red" stroke-width="3"/>
+            <line x1="150" y1="300" x2="90" y2="380" stroke="red" stroke-width="3"/>
+            <line x1="150" y1="300" x2="210" y2="380" stroke="red" stroke-width="3"/>
+            <line x1="150" y1="420" x2="105" y2="460" stroke="red" stroke-width="3"/>
+            <line id="right" x1="150" y1="420" x2="195" y2="460" stroke="red" stroke-width="3"/>
+            <ellipse id="ell" cx="660" cy="45" rx="120" ry="35", fill="lightblue">
+            </ellipse>
+            <circle id="ball" cx="205" cy="430" r="10", fill="rgba(128,255,40,0.90)"> </circle>
+            <text x="570" y="45" fill="Grey">Welc to Data Visualization </text>
+            
+            <ellipse id="ell" cx="750" cy="380" rx="80" ry="25", fill="rgba(120,56,78,0.1)">
+            </ellipse>
+            
+            <svg id="sec">
+            <rect x="670" y="380" width="160" height="80" fill="rgba(124,34,78,0.2)" ></rect>
+            <circle id="basket" cx="750" cy="430" r="10", fill="rgba(128,255,40,0.30)"> </circle>
+            <circle id="basket" cx="750" cy="430" r="10", fill="rgba(128,155,40,0.30)"> </circle>
+            <circle id="basket" cx="750" cy="430" r="10", fill="rgba(12,155,120,0.30)"> </circle>
+            <circle id="basket" cx="750" cy="430" r="10", fill="rgba(128,25,250,0.20)"> </circle>
 
-This is a starting project to make sure you can write and host a webpage that generates graphics using d3. 
+            <rect x="950" y="400" width="160" height="60" fill="rgba(120,57,89,0.7)"> </rect>
+            <rect x="967" y="350" width="125" height="50" fill="rgba(10,57,128,0.5)"> </rect>
+            <line x1="1027" y1="350" x2="1027" y2="280" stroke="orange" stroke-width="4"/>
+            
+            <polygon fill="yellow" stroke="blue" stroke-width="2" 
+                     points="1015,315
+                             1045,315
+                             1028,275" />
+            
+            </svg>
 
-The primary goal is to be able to generate graphics primitives (circles, rectangles, lines, polygons) at different locations on the screen with different colors. 
+            <line x1="470" y1="140" x2="520" y2="140" stroke="orange" stroke-width="4"/>
+            <line x1="550" y1="140" x2="600" y2="140" stroke="purple" stroke-width="4"/>
+            <line x1="630" y1="140" x2="680" y2="140" stroke="red" stroke-width="4"/>
+            <line x1="710" y1="140" x2="760" y2="140" stroke="green" stroke-width="4"/>
+            <line x1="790" y1="140" x2="840" y2="140" stroke="blue" stroke-width="4"/>
+            <line x1="870" y1="140" x2="920" y2="140" stroke="brown" stroke-width="4"/>
+            <line x1="950" y1="140" x2="1000" y2="140" stroke="red" stroke-width="4"/>
 
-The secondary goal is to introduce you to coding on GitHub, including creating a gh-pages branch to host your visualizations.
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, you **must identify** the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
 
-For example, you could download one of the d3.js examples, read it through so you understand what it's doing, and then change the appearance of the graphical output to use different color schemes, different primitive shapes, different layouts of the primitives, and so on.
+         </svg>
+            
+      
+                         
+   </div>
 
-Resources
----
+   <script type="text/javascript">
 
-If you need a JavaScript/HTML/CSS refresher, see [Technology Fundamentals by Scott Murray](http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_html) and/or [JavaScript Codeacademy](https://www.codecademy.com/en/tracks/javascript).
 
-If you need a Git/GitHub refreseher, see [GitHub Bootcamp](https://help.github.com/categories/bootcamp/), the [GitHub Guides](https://guides.github.com/) (especially the ones on Hello World, and Understanding the GitHub Flow, and Forking Projects), and [CodeSchool's Try Git Course](https://www.codeschool.com/courses/try-git).
+             var kick= d3.select("#right")
+                           .transition()
+                           .duration(2500)
+                           .delay(750)
+                           .attr("x2", 205)
+                           .attr("y2", 430)
+                           .transition()
+                           .attr("x2", 195)
+                           .attr("y2", 460)
 
-Requirements
----
+            var rendered=d3.select("#ball")
+                           .transition()
+                           .duration(3500)
+                           .delay(1500)
+                           .attr("cx", 730)
+                           .attr("cy", 150)
+                           .transition()
+                           .duration(3500)
+                           .attr("cx", 750)
+                           .attr("cy", 430)
 
-1. Your project should contain at least four kinds of graphics primitives (circles, rectangles, lines, polygons) in different colors. 
-2. Your document should identify the source of the code if you start with code that you found. 
-3. Your code should be forked from the GitHub repo and linked using GitHub pages. See the "GitHub Details" section below for detailed instructions on how to do this.
+            var circle= d3.select("#sec")
+                          .selectAll("circle")
+                          .data([10,30,5,40,3,20,10,2,6,13,25,17,3,5,19]) ;
+               var newcir=circle.enter().append("circle");
+                          newcir.attr("cx", 750 ) 
+                          .attr("cy", 430) 
+                          .attr("r", 10)
+                          .attr("fill", function (d, i) { 
+                          var col ;
+                          if (d<10) { col="green"} 
+                          else if (d < 20) { col="steelblue"}
+                          else if (d<30) { col="red" }
+                          else col="orange"
+                          return col ;    }) 
+                       
 
-GitHub Details
----
+                    var allcir=d3.select("#sec")
+                          .selectAll("circle")
+                          .transition()
+                          .duration(17500)
+                          .delay(7500)
+                          .attr("cx",function(d) {return d* 41 ;} ) 
+                          .attr("cy", function(d) { return Math.random() * 200 ; }) 
+                          .attr("r", function (d) { return d + 5 ; }) 
 
-- Make sure I have your GitHub Username (collected through the course survey) and have added you to the "Class" team. You'll get an email from GitHub when this is done and you will be able to access the assignment repository.
-- Fork the GitHub Repository for Assignment 1. You now have a copy associated with your username.
-- Make changes to index.html to fulfill the project requirements. 
-- Make sure your "master" branch matches your "gh-pages" branch. See the GitHub Guides referenced above if you need help.
-- Edit the README.md with a link to your gh-pages site "http://YourUsernameGoesHere.github.io/01-ghd3/index.html".
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
+                  var poly=d3.select("#sec")
+                              .selectAll("polygon")
+                              .transition()
+                              .duration(2500)
+                              .attr("transform", function (d) { return "rotate(-40, 600, 500)" ; })  
 
-Vis Details
----
+                  var eyes=d3.selectAll("#eyes")
+                              .transition()
+                              .duration(2500)
+                              .delay(7500)
+                              .attr("r", 15)
+                              .attr("fill", "steelblue")
+                              .transition()
+                              .duration(2500)
+                              .attr("r",10)
+                              .attr("fill","red")
+                              .transition()
+                              .duration(2500)
+                              .attr("r", 15)
+                              .attr("fill", "blue")
+                              .transition()
+                              .duration(2500)
+                              .attr("r",10)
+                              .attr("fill","red")
 
-For this project you should use d3.js. 
-You can download examples from [d3.js](http://d3js.org) or start from scratch.
+                              
+                            
+                              
+                  
 
-See the [Using d3js](https://github.com/mbostock/d3/wiki#using) documentation for how to run your own local server.
-
-Creative solutions are welcome! In the past I've seen smiling lollipops, portraits, and more.
-
-Go beyond the minimum requirements of this project.
-Experiment with other aspects of the [d3 API](https://github.com/mbostock/d3/wiki/API-Reference) and [d3 Tutorials](https://github.com/mbostock/d3/wiki/Tutorials). 
-Try making the elements interactive, for example, or animate them.
-
-Grading
----
-
-Grades are on a 120 point scale. 
-100 points will be graded for functionality: the program does what the assignment requests with an informative README. 
-
-I will use Google Chrome to view submissions. 
-Be sure to test your code there.
-
-Total -- 120
-
-(0 will be assigned if the code won't run.)
-
-Functionality -- 80
-
-20 -- Circles and Rectangles  
-20 -- Lines  
-20 -- Polygons  
-20 -- Different colors  
-
-README Quality -- 20
-
-5 -- A description of what you have created. Screenshots are helpful.  
-10 -- A working link to hosted files  
-5 -- Section for Technical and Design Achievements
-
-Technical Achievement -- 10  
-Design Achievement -- 10
-
-Remember, it is up to *you* to define what constitutes a technical and design achievements.
-Be ambitious as these are designed to allow you to shape your learning.
-These are the only way to move from B to A territory.
-
+     
+                                    
+                            
+                           
+                           
+   </script>
+ </body>
+</html>
