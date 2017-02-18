@@ -4,14 +4,14 @@ Introduction to Data Visualization using d3.js
 
 I used d3.js for completing my assignment 1 "Hello world" . It includes basic SVG primitive shapes and their involvment to create a simple visualization. 
 
-1. Details of the visualization : 
+# Details of the visualization : 
 
 This visualization depicts a boy standing in left part of the screen where he hits the ball and the ball travels till it falls in the basket kept in the center of the screen .
 
 Once the ball lands to the basket , Two events occur, first is the bulging out of boys' eyes with different colors expressing the happiness and other represents the different colors of balls coming out from the basket. Both occuring simultaneously.
 
 
-2. Working Link :
+# Working Link :
 
 https://rohitpalsingh7.github.io/Hello-World-Interaction/.
 
@@ -19,7 +19,7 @@ Reference Link : https://bost.ocks.org/mike/transition/ and
 
 https://bost.ocks.org/mike/selection/
 
-3. Technical and Design Achievements :
+# Technical and Design Achievements :
 
 Technical Achievements :
 
