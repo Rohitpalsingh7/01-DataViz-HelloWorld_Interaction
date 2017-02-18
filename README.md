@@ -2,7 +2,7 @@
 Introduction to Data Visualization using d3.js
 
 
-// I used d3.js for completing my assignment 1 "Hello world" . It includes basic SVG primitive shapes and their involvment to create a simple visualization. 
+I used d3.js for completing my assignment 1 "Hello world" . It includes basic SVG primitive shapes and their involvment to create a simple visualization. 
 
 1. Details of the visualization : 
 
@@ -15,7 +15,9 @@ Once the ball lands to the basket , Two events occur, first is the bulging out o
 
 https://rohitpalsingh7.github.io/Hello-World-Interaction/.
 
-Reference Link : https://bost.ocks.org/mike/transition/ and https://bost.ocks.org/mike/selection/
+Reference Link : https://bost.ocks.org/mike/transition/ and 
+
+https://bost.ocks.org/mike/selection/
 
 3. Technical and Design Achievements :
 
